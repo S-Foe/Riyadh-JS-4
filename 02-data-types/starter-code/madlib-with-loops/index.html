@@ -27,6 +27,8 @@
   </div>
 
   <h2 id="favorites">
+<ul>
+</ul>
 
   </h2>
 
@@ -36,14 +38,27 @@
   <script src="js/madlib-console.js"></script>
   
   <script>
-    var saying = '';
-    $('#create').on('click',function(){
+    let saying = '';
+    $('#create').click(function(){
        random1 = Math.floor((Math.random() * startupX.length));
        random2 = Math.floor((Math.random() * startupY.length));
 
-      sayign = 'A startup that is ' + startupX[random1] + ', but for ' + startupY[random2]';
-      $('#xForY').innerHTML = saying;
+      saying = 'A startup that is ' + startupX[random1] + ', but for ' + startupY[random2];
+      $('#xForY').text(saying);
     });
+var save_arr = [];
+   $('#save').click(function(){
+	if(saying != '')save_arr.push(saying);
+	});
+$('#print').click(function(){
+$('#favorites ul').empty();
+save_arr.forEach(function(value){
+$('#favorites ul').append('<li>'+value+'</li>');
+
+
+});
+
+});
   </script>
 
 </body>
