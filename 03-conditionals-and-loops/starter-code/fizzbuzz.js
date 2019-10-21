@@ -9,7 +9,13 @@
 
 // ##### Step 1:
 // Construct a for loop that iterates through, and `console.log()`'s out, numbers 1 - 100.
-for(var i=1; i<=100;i++){
+
+for(let i = 1;i<=100;i++)
+{
+    
+}
+
+
 
 // ##### Step 2:
 // Add an `if/else` statement that logs the string `"fizz"` if the value being iterated over is divisible by `3`; otherwise, log out the value.
